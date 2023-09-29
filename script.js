@@ -1,18 +1,18 @@
 console.log("Welcome to Spotify");
 let songIndex=0;
-let audioElement = new Audio('songs/1.mp3');
+let audioElement = new Audio('1.mp3');
 let masterPlay=document.getElementById('masterPlay');
 let progressBar=document.getElementById('progressBar');
 let gif=document.getElementById('gif');
 let item=Array.from(document.getElementsByClassName('item'));
 
 let songs=[
-    {songName:"Tum Prem Ho", filePath:"songs/1.mp3", coverPath:"covers/1.jpeg"},
-    {songName:"O Kanha ab toh Murli", filePath:"songs/2.mp3", coverPath :"covers/2.jpg"},
-    {songName:"Mere Kanha", filePath:"songs/3.mp3", coverPath:"covers/3.webp"},
-    {songName:"Arti Kunj Bihari Ki", filePath:"songs/4.mp3", coverPath:"covers/4.jpg"},
-    {songName:"Ram Siya Ram", filePath:"songs/5.mp3", coverPath:"covers/5.jpg"},
-    {songName:"Shri Krishna Govind", filePath:"songs/6.mp3", coverPath:"covers/6.png"},
+    {songName:"Tum Prem Ho", filePath:"1.mp3", coverPath:"1.jpeg"},
+    {songName:"O Kanha ab toh Murli", filePath:"songs/2.mp3", coverPath :"2.jpg"},
+    {songName:"Mere Kanha", filePath:"3.mp3", coverPath:"3.webp"},
+    {songName:"Arti Kunj Bihari Ki", filePath:"4.mp3", coverPath:"4.jpg"},
+    {songName:"Ram Siya Ram", filePath:"5.mp3", coverPath:"5.jpg"},
+    {songName:"Shri Krishna Govind", filePath:"6.mp3", coverPath:"6.png"},
 ]
 
 item.forEach((element,i)=>{
@@ -78,7 +78,7 @@ document.getElementById('next').addEventListener('click',()=>{
     else{
         songIndex+=1;
     }
-    audioElement.src=`songs/${songIndex+1}.mp3`;
+    audioElement.src=`${songIndex+1}.mp3`;
     masterSongName.innerText=songs[songIndex].songName;
         audioElement.currentTime=0;
         audioElement.play();
@@ -93,7 +93,7 @@ document.getElementById('previous').addEventListener('click',()=>{
     else{
         songIndex-=1;
     }
-        audioElement.src=`songs/${songIndex+1}.mp3`;
+        audioElement.src=`${songIndex+1}.mp3`;
         masterSongName.innerText=songs[songIndex].songName;
         audioElement.currentTime=0;
         audioElement.play();
