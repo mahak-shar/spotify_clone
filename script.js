@@ -8,7 +8,7 @@ let item=Array.from(document.getElementsByClassName('item'));
 
 let songs=[
     {songName:"Tum Prem Ho", filePath:"1.mp3", coverPath:"1.jpeg"},
-    {songName:"O Kanha ab toh Murli", filePath:"songs/2.mp3", coverPath :"2.jpg"},
+    {songName:"O Kanha ab toh Murli", filePath:"2.mp3", coverPath :"2.jpg"},
     {songName:"Mere Kanha", filePath:"3.mp3", coverPath:"3.webp"},
     {songName:"Arti Kunj Bihari Ki", filePath:"4.mp3", coverPath:"4.jpg"},
     {songName:"Ram Siya Ram", filePath:"5.mp3", coverPath:"5.jpg"},
@@ -61,7 +61,7 @@ Array.from(document.getElementsByClassName("songItemPlay")).forEach((element)=>{
         songIndex=parseInt(e.target.id);
         e.target.classList.remove('fa-circle-play');
         e.target.classList.add('fa-circle-pause');
-        audioElement.src=`songs/${songIndex+1}.mp3`;
+        audioElement.src=`${songIndex+1}.mp3`;
         masterSongName.innerText=songs[songIndex].songName;
         audioElement.currentTime=0;
         audioElement.play();
