@@ -7,12 +7,12 @@ let gif=document.getElementById('gif');
 let item=Array.from(document.getElementsByClassName('item'));
 
 let songs=[
-    {songName:"Tum Prem Ho", filePath:"songs/1.mp3", coverPath:"covers/1.jpeg"},
-    {songName:"O Kanha ab toh Murli", filePath:"songs/2.mp3", coverPath :"covers/2.jpg"},
-    {songName:"Mere Kanha", filePath:"songs/3.mp3", coverPath:"covers/3.webp"},
-    {songName:"Arti Kunj Bihari Ki", filePath:"songs/4.mp3", coverPath:"covers/4.jpg"},
-    {songName:"Ram Siya Ram", filePath:"songs/5.mp3", coverPath:"covers/5.jpg"},
-    {songName:"Shri Krishna Govind", filePath:"songs/6.mp3", coverPath:"covers/6.png"},
+    {songName:"Tum Prem Ho", filePath:"songs/1.mp3", coverPath:"images/1.jpeg"},
+    {songName:"O Kanha ab toh Murli", filePath:"songs/2.mp3", coverPath :"images/2.jpg"},
+    {songName:"Mere Kanha", filePath:"songs/3.mp3", coverPath:"images/3.jpg"},
+    {songName:"Arti Kunj Bihari Ki", filePath:"songs/4.mp3", coverPath:"images/4.jpg"},
+    {songName:"Ram Siya Ram", filePath:"songs/5.mp3", coverPath:"images/5.jpg"},
+    {songName:"Shri Krishna Govind", filePath:"songs/6.mp3", coverPath:"images/6.png"},
 ]
 
 item.forEach((element,i)=>{
