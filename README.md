@@ -9,7 +9,7 @@ A responsive and visually appealing Spotify clone that allows users to explore m
 
 ## 📸 Preview
 
-![Preview](./preview.png)
+![Preview](preview.png)
 
 ---
 
