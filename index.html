@@ -2,81 +2,124 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
         <ul>
-            <li class="logo"><img src="images/logospotify.png" alt="spotify"></li>
+            <li class="logo">
+                <i class="fab fa-spotify"></i>
+            </li>
             <li class="brand">Spotify</li>
             <li>Home</li>
-            <li>About</li>
+            <li>Search</li>
+            <li>Your Library</li>
         </ul>
     </nav>
+
     <div class="container">
         <div class="songList">
             <h2>Kanha Ji Vibes</h2>
-                <div class="songItemContainer">
-                    <div class="item">
-                        <img src="images/1.jpeg" alt="1" />
-                        <span class="songName">Tum Prem Ho-Arun Prajith</span>
-                        <span class="songListPlay"><span class="timeSpan">07:35 <i id="0" class="far songItemPlay fa-circle-play"></i></span></span>
-                    </div>
-                </div> 
-                <div>
-                    <div class="item">
-                        <img src="images/2.jpg" alt="2" />
-                        <span class="songName">O Kanha ab toh Murli -Chetna</span>
-                        <span class="songListPlay"><span class="timeSpan">10:03 <i id="1" class="far songItemPlay fa-circle-play"></i></span></span>
-                    </div>
-                </div> 
-                <div>
-                    <div class="item">
-                        <img src="images/3.jpg" alt="3" />
-                        <span class="songName">Mere Kanha</span>
-                        <span class="songListPlay"><span class="timeSpan">05:35 <i id="2" class="far songItemPlay fa-circle-play"></i></span></span>
-                    </div>
-                </div> 
-                <div>
-                    <div class="item">
-                        <img src="images/4.jpg" alt="4" />
-                        <span class="songName">Arti Kunj Bihari ki</span>
-                        <span class="songListPlay"><span class="timeSpan">05:35 <i id="3" class="far songItemPlay fa-circle-play"></i></span></span>
-                    </div>
-                </div> 
-                <div>
-                    <div class="item">
-                        <img src="images/5.jpg" alt="5" />
-                        <span class="songName">Ram Siya Ram -Sachet Tandon</span>
-                        <span class="songListPlay"><span class="timeSpan">05:35 <i id="4" class="far songItemPlay fa-circle-play"></i></span></span>
-                    </div>
-                </div> 
-                <div>
-                    <div class="item">
-                        <img src="images/6.png" alt="6" />
-                        <span class="songName">Shri Krishna Govind</span>
-                        <span class="songListPlay"><span class="timeSpan">05:35 <i id="5" class="far songItemPlay fa-circle-play"></i></span></span>
-                    </div>
-                </div> 
+            <div class="songItemContainer">
+                <div class="item" data-index="0">
+                    <img src="images/1.jpeg" alt="1" />
+                    <span class="songName">Tum Prem Ho - Arun Prajith</span>
+                    <span class="songListPlay">
+                        <span class="timeSpan">07:35</span>
+                        <i class="far fa-circle-play songItemPlay" data-index="0"></i>
+                    </span>
+                </div>
+                
+                <div class="item" data-index="1">
+                    <img src="images/2.jpg" alt="2" />
+                    <span class="songName">O Kanha ab toh Murli - Chetna</span>
+                    <span class="songListPlay">
+                        <span class="timeSpan">10:03</span>
+                        <i class="far fa-circle-play songItemPlay" data-index="1"></i>
+                    </span>
+                </div>
+                
+                <div class="item" data-index="2">
+                    <img src="images/3.jpg" alt="3" />
+                    <span class="songName">Mere Kanha</span>
+                    <span class="songListPlay">
+                        <span class="timeSpan">05:35</span>
+                        <i class="far fa-circle-play songItemPlay" data-index="2"></i>
+                    </span>
+                </div>
+                
+                <div class="item" data-index="3">
+                    <img src="images/4.jpg" alt="4" />
+                    <span class="songName">Arti Kunj Bihari ki</span>
+                    <span class="songListPlay">
+                        <span class="timeSpan">05:35</span>
+                        <i class="far fa-circle-play songItemPlay" data-index="3"></i>
+                    </span>
+                </div>
+                
+                <div class="item" data-index="4">
+                    <img src="images/5.jpg" alt="5" />
+                    <span class="songName">Ram Siya Ram - Sachet Tandon</span>
+                    <span class="songListPlay">
+                        <span class="timeSpan">05:35</span>
+                        <i class="far fa-circle-play songItemPlay" data-index="4"></i>
+                    </span>
+                </div>
+                
+                <div class="item" data-index="5">
+                    <img src="images/6.png" alt="6" />
+                    <span class="songName">Shri Krishna Govind</span>
+                    <span class="songListPlay">
+                        <span class="timeSpan">05:35</span>
+                        <i class="far fa-circle-play songItemPlay" data-index="5"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cover">
+            <img id="currentSongCover" class="currentSongCover" src="images/1.jpeg" alt="Current Song">
+            <div class="currentSongTitle" id="currentSongTitle">Tum Prem Ho</div>
+            <div class="currentSongArtist" id="currentSongArtist">Arun Prajith</div>
+        </div>
+    </div>
 
-        </div>
-        <div class="cover"></div>
-    </div>
     <div class="bottom">
-        <input type="range" name="range" id="progressBar" value="0" min="0" max="100">
-        <div class="icons">
-            <!--fontawesome icons-->
-            <i class="fa-solid fa-backward-step" id="previous"></i>
-            <i class="fa-regular fa-circle-play" id="masterPlay"></i>
-            <i class="fa-solid fa-forward-step" id="next"></i>
-        </div>
-        <div class="songInfo">
-            <img src="images/playingmusic.gif" width="45px" id="gif" alt="" ><span id="masterSongName">Tum Prem Ho-Bharat Kamal </span>
+        <div class="playerContent">
+            <div class="songInfo" id="songInfo">
+                <img src="images/1.jpeg" width="50px" id="gif" alt="Playing">
+                <div class="songDetails">
+                    <span class="masterSongName" id="masterSongName">Tum Prem Ho</span>
+                    <span class="masterArtist" id="masterArtist">Arun Prajith</span>
+                </div>
+            </div>
+            
+            <div class="playerControls">
+                <div class="controls">
+                    <i class="fa-solid fa-shuffle" id="shuffle"></i>
+                    <i class="fa-solid fa-backward-step" id="previous"></i>
+                    <i class="fa-regular fa-circle-play" id="masterPlay"></i>
+                    <i class="fa-solid fa-forward-step" id="next"></i>
+                    <i class="fa-solid fa-repeat" id="repeat"></i>
+                </div>
+                
+                <div class="progressContainer">
+                    <span class="timeDisplay" id="currentTime">0:00</span>
+                    <input type="range" name="range" id="progressBar" value="0" min="0" max="100">
+                    <span class="timeDisplay" id="totalTime">0:00</span>
+                </div>
+            </div>
+            
+            <div class="volumeControl">
+                <i class="fa-solid fa-volume-high" id="volumeIcon"></i>
+                <input type="range" id="volumeBar" min="0" max="100" value="100">
+            </div>
         </div>
     </div>
-    <script src="https://kit.fontawesome.com/934151cf12.js" crossorigin="anonymous"></script>
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
